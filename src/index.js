@@ -7,8 +7,10 @@ import reducer from './reducers'
 
 const store = createStore(
   reducer,
-  window.
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 )
+
+global.store = store
 
 render(
   <Provider store={store}>
