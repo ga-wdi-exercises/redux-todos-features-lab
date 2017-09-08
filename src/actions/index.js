@@ -15,19 +15,3 @@ export const toggleTodo = (id) => ({
   type: 'TOGGLE_TODO',
   id
 })
-
-<<<<<<< HEAD
-
-
-=======
->>>>>>> fbfde0cadbfe119f5e983b5006237476871e54d4
-export const removeTodo = (id) => ({
-  type: 'REMOVE_TODO',
-  id
-})
-<<<<<<< HEAD
-
-
-console.log(removeTodo(1))
-=======
->>>>>>> fbfde0cadbfe119f5e983b5006237476871e54d4

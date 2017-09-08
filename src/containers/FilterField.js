@@ -1,8 +1,8 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { setVisibilityFilter } from '../actions'
+import { addTodo } from '../actions'
 
-let FilterField = (props) => {
+let AddTodo = ({ dispatch }) => {
   let input
 
   return (
@@ -12,19 +12,19 @@ let FilterField = (props) => {
         if (!input.value.trim()) {
           return
         }
-        props.dispatch(setVisibilityFilter('SHOW_SEARCH', input.value))
+        dispatch(addTodo(input.value))
         input.value = ''
       }}>
         <input ref={node => {
           input = node
         }} />
-        <button type='submit'>
-          Search
+      <button type='submit'>
+          Add Todo
         </button>
       </form>
     </div>
   )
 }
-FilterField = connect()(FilterField)
+AddTodo = connect()(AddTodo)
 
-export default FilterField
+export default AddTodo
