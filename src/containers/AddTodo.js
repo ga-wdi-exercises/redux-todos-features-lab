@@ -18,11 +18,9 @@ let AddTodo = (props) => {
         <input ref={node => {
           input = node
         }} />
-<<<<<<< HEAD
-      <button type='submit'>
-=======
+
         <button type='submit'>
->>>>>>> fbfde0cadbfe119f5e983b5006237476871e54d4
+
           Add Todo
         </button>
       </form>
