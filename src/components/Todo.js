@@ -1,14 +1,17 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const Todo = ({ onClick, completed, text }) => (
-  <li
-    onClick={onClick}
-    style={{
-      textDecoration: completed ? 'line-through' : 'none'
-    }}
-  >
-    {text}
+// the following is an example of object destructuring, could have Todo = (props) and put props before the props used
+const Todo = ({ onClick, onRemove, completed, text }) => (
+  <li>
+    <span onClick={onClick}
+      style={{
+        textDecoration: completed ? 'line-through' : 'none'
+      }}>
+      {text}
+    </span>
+
+    <button onClick={onRemove} >X</button>
   </li>
 )
 
