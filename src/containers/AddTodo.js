@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { addTodo } from '../actions'
 
-let AddTodo = ({ props }) => {
+let AddTodo = (props) => {
   let input
 
   return (
@@ -18,7 +18,7 @@ let AddTodo = ({ props }) => {
         <input ref={node => {
           input = node
         }} />
-        <button type="submit">
+        <button type='submit'>
           Add Todo
         </button>
       </form>

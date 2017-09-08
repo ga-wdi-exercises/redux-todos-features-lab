@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { setVisibilityFilter } from '../actions'
 
-let FilterField = ({ props }) => {
+let FilterField = (props) => {
   let input
 
   return (
@@ -18,7 +18,7 @@ let FilterField = ({ props }) => {
         <input ref={node => {
           input = node
         }} />
-        <button type="submit">
+        <button type='submit'>
           Search
         </button>
       </form>
