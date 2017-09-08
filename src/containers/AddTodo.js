@@ -22,6 +22,7 @@ let AddTodo = ({ dispatch }) => {
           Add Todo
         </button>
       </form>
+      
     </div>
   )
 }

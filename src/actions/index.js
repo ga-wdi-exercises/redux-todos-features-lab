@@ -7,10 +7,18 @@ export const addTodo = (text) => ({
 
 export const setVisibilityFilter = (filter) => ({
   type: 'SET_VISIBILITY_FILTER',
-  filter
+  filter,
+  // query
 })
 
 export const toggleTodo = (id) => ({
   type: 'TOGGLE_TODO',
   id
 })
+
+export const removeTodo = (id) => ({
+  type: 'REMOVE_TODO',
+  id
+})
+
+console.log(removeTodo(1))
