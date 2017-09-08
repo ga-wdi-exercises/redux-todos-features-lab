@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import { toggleTodo } from '../actions'
+import { toggleTodo, removeTodo } from '../actions'
 import TodoList from '../components/TodoList'
 
 const getVisibleTodos = (todos, filter) => {
@@ -10,8 +10,11 @@ const getVisibleTodos = (todos, filter) => {
       return todos.filter(t => t.completed)
     case 'SHOW_ACTIVE':
       return todos.filter(t => !t.completed)
+    case 'SHOW_SEARCH':
+      return todos.filter(t => t.text.includes(filter.query))
     default:
-      throw new Error('Unknown filter: ' + filter)
+      // throw new Error('Unknown filter: ' + filter)
+      return todos
   }
 }
 
@@ -20,7 +23,8 @@ const mapStateToProps = (state) => ({
 })
 
 const mapDispatchToProps = {
-  onTodoClick: toggleTodo
+  onTodoClick: toggleTodo,
+  onRemoveTodo: removeTodo
 }
 
 const VisibleTodoList = connect(
