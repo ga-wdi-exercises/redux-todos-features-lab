@@ -10,8 +10,11 @@ const getVisibleTodos = (todos, filter) => {
       return todos.filter(t => t.completed)
     case 'SHOW_ACTIVE':
       return todos.filter(t => !t.completed)
+    case 'SHOW_SEARCH':
+      return todos.filter(t => t.text.includes(filter.query))
     default:
-      throw new Error('Unknown filter: ' + filter)
+      // throw new Error('Unknown filter: ' + filter)
+      return todos
   }
 }
 

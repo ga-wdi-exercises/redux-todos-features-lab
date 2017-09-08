@@ -17,6 +17,8 @@ const todos = (state = [], action) => {
       )
     case 'REMOVE_TODO':
       return state.filter(todo => todo.id !== action.id)
+    // case 'SHOW_SEARCH'
+    //   return todos.filter(t => t.text.includes())
     default:
       return state
   }
